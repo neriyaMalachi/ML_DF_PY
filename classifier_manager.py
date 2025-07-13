@@ -21,7 +21,7 @@ class ClassifierManager:
         self.classifier.fit(self.train_data, target_column)
         print("\nהמודל נבנה בהצלחה!")
 
-        acc = self.classifier.evaluate(test_data, target_column)
+        acc = self.classifier.evaluate(self.test_data, target_column)
         self.ui.show_accuracy(acc)
 
         while True:
